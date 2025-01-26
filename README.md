@@ -12,8 +12,10 @@ Python implemenation of [mib2zabbix](https://github.com/zabbix-tools/mib2zabbix)
 
 ### Install from GitHub
 
+Via pip or pipx
+
 ```bash
-<pip command line>
+pip install -U git+https://github.com/dmcken/mib2zabbix.git
 ```
 
 ### Mappings
