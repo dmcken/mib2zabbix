@@ -1,0 +1,38 @@
+[build-system]
+requires      = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+# Can be removed once the GIT dependencies are gone.
+# allow-direct-references = true
+
+[tool.hatch.version]
+path = "src/mib2zabbix/__init__.py"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name    = "mib2zabbix"
+dynamic = ["version"]
+authors = [
+  { name="David Mc Ken", email="david.mcken@codepro.guru" },
+]
+description="MIB to Zabbix template"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+]
+dependencies = [
+    "python-dotenv",
+]
+
+[project.urls]
+Homepage = "https://github.com/dmcken/mib2zabbix"
+Issues   = "https://github.com/dmcken/mib2zabbix/issues"
+
+[project.scripts]
+mib2zabbix    = "mib2zabbix.cli:main"
