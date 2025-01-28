@@ -28,6 +28,8 @@ classifiers = [
 ]
 dependencies = [
     "python-dotenv",
+    "pysmi",
+    "pyyaml",
 ]
 
 [project.urls]
